@@ -1,8 +1,10 @@
 from django.urls import path, include
 from rest_framework.routers import DefaultRouter
-from .views.center import CenterViewSet
+
+from .views.branch import BranchViewSet
 router = DefaultRouter()
-router.register(r'center', CenterViewSet, basename='center')
+router.register(r'branches', BranchViewSet, basename='branch')
+
 
 urlpatterns = [
     path('', include(router.urls)),

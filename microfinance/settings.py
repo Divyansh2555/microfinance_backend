@@ -21,6 +21,7 @@ INSTALLED_APPS = [
     "centers",
     "groups",
     "accounts",
+    "organizations",
 
 ]
 
