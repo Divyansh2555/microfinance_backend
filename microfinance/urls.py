@@ -7,6 +7,6 @@ urlpatterns = [
     path('org/', include('organizations.urls')),
     path('center/', include('centers.urls')),
     path('group/', include('groups.urls')),
-
+    path('meeting/', include('meeting.urls')),
 
 ]

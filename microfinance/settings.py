@@ -22,6 +22,7 @@ INSTALLED_APPS = [
     "groups",
     "accounts",
     "organizations",
+    "meeting",
 
 ]
 

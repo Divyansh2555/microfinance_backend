@@ -1,0 +1,3 @@
+from .meeting_attendance import MeetingAttendanceSerializer
+from .collection import CollectionSerializer
+from .meeting import MeetingSerializer

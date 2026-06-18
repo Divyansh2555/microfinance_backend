@@ -27,6 +27,12 @@ class Document(models.Model):
         blank=True
     )
 
+    accounts_number = models.ImageField(
+        upload_to="documents/accounts/",
+        null=True,
+        blank=True
+    )
+
     created_at = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
