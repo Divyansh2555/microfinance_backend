@@ -1,8 +1,10 @@
 from django.db import models
+from .areaoffice import AreaOffice
 
 
 
 class Branch(models.Model):
+    area = models.ForeignKey(AreaOffice, on_delete=models.CASCADE)
     branch_name = models.CharField(max_length=20,unique=True)
     branch_code = models.CharField(max_length=20,unique=True)
     email = models.EmailField(max_length=20,unique=True)

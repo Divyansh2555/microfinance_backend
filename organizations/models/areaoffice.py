@@ -1,14 +1,12 @@
 from django.db import models
-from .headoffice import HeadOffice
+from .regional import RegionalOffice
 
 
 
-class RegionalOffice(models.Model):
+class AreaOffice(models.Model):
     name = models.CharField(max_length=100)
     code = models.IntegerField()
-
-    head_office = models.ForeignKey(HeadOffice, on_delete=models.CASCADE)
-
+    regional_office = models.ForeignKey(RegionalOffice, on_delete=models.CASCADE)
 
 
     def __str__(self):

@@ -1,6 +1,6 @@
 from django.db import models
 from django.core.exceptions import ValidationError
-from organizations.models.branch import Branch
+from organizations.models.branchoffice import Branch
 
 class Center(models.Model):
     branch = models.ForeignKey(Branch, on_delete=models.CASCADE, related_name="centers")
