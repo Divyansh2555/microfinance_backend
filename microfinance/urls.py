@@ -8,5 +8,6 @@ urlpatterns = [
     path('center/', include('centers.urls')),
     path('group/', include('groups.urls')),
     path('meeting/', include('meeting.urls')),
+    path('api/', include('accounts.urls')),
 
 ]

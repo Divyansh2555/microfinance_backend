@@ -1,12 +1,25 @@
 from django.db import models
-class Role(models.TextChoices):
-        SUPER_ADMIN = "SUPER_ADMIN", "Super Admin"
-        MANAGEMENT = "MANAGEMENT", "Management"
-        REGIONAL_MANAGER = "REGIONAL_MANAGER", "Regional Manager"
-        AREA_MANAGER = "AREA_MANAGER", "Area Manager"
-        BRANCH_MANAGER = "BRANCH_MANAGER", "Branch Manager"
-        STAFF = "STAFF", "Staff"
-        LOAN_OFFICER = "LOAN_OFFICER", "Loan Officer"
-        FIELD_OFFICER = "FIELD_OFFICER", "Field Officer"
-        FINANCE = "FINANCE", "Finance"
-        ACCOUNTANT = "ACCOUNTANT", "Accountant"
+
+
+class Role(models.Model):
+    ROLE_CHOICES = (
+        ("SUPER_ADMIN", "Super Admin"),
+        ("MANAGEMENT", "Management"),
+        ("REGIONAL_MANAGER", "Regional Manager"),
+        ("AREA_MANAGER", "Area Manager"),
+        ("BRANCH_MANAGER", "Branch Manager"),
+        ("STAFF", "Staff"),
+        ("LOAN_OFFICER", "Loan Officer"),
+        ("FIELD_OFFICER", "Field Officer"),
+        ("FINANCE", "Finance"),
+        ("ACCOUNTANT", "Accountant"),
+    )
+
+    name = models.CharField(
+        max_length=20,
+        choices=ROLE_CHOICES,
+        unique=True
+    )
+
+    def __str__(self):
+        return self.name
